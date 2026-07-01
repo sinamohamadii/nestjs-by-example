@@ -144,10 +144,12 @@ nestjs-by-example/
 ├── examples/              # Learning notes and guides
 ├── scripts/               # Utility scripts
 ├── src/
-│   └── examples/
+│   └── examples/                 # Core learning modules (Nest CLI generated)
+│       │
 │       ├── basics/
 │       ├── modules/
 │       ├── dependency-injection/
+│       ├── config/
 │       ├── validation/
 │       ├── pipes/
 │       ├── guards/
@@ -157,10 +159,15 @@ nestjs-by-example/
 │       ├── authentication/
 │       ├── authorization/
 │       ├── database/
-│       ├── graphql/
+│       ├── upload/
+│       ├── cache/
+│       ├── events/
+│       ├── cron/
+│       ├── queues/
 │       ├── websocket/
+│       ├── graphql/
 │       ├── testing/
-│       └── swagger/
+│       └── openapi/
 │
 ├── test/
 └── README.md
