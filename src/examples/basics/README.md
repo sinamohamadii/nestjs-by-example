@@ -28,15 +28,19 @@ Before starting this chapter, you should have:
 
 * Node.js installed
 * Nest CLI installed
-* The project cloned and running
+* The project cloned and dependencies installed (`pnpm install`)
 * Basic knowledge of JavaScript or TypeScript
 * Basic understanding of HTTP requests
 
-Import this module into the app module and start the development server:
+The `BasicsModule` is already registered in `ExamplesModule`, which is imported by `AppModule`. Start the development server:
 
 ```bash
-npm run start:dev
+pnpm run start:dev
 ```
+
+Then open `requests.http` in this folder and run the requests against `http://localhost:3000`.
+
+> For the recommended learning order across all chapters, see **[ROADMAP.md](../../../ROADMAP.md)**.
 
 ---
 
@@ -181,18 +185,20 @@ Services perform work.
 
 The `basics` module demonstrates the smallest useful NestJS application.
 
-During this chapter, we'll gradually build endpoints demonstrating:
+It includes endpoints covering:
 
-* Basic GET requests
-* Route parameters
-* Query parameters
-* POST requests
-* PUT requests
-* DELETE requests
-* Returning JSON objects
-* Injecting Services into Controllers
+* Basic GET requests — `GET /basics`, `GET /basics/hello`
+* Route parameters — `GET /basics/hello/:name`
+* Query parameters — `GET /basics/greet?name=...&language=...`
+* POST requests — `POST /basics/greetings`
+* PUT requests — `PUT /basics/greetings/:id`
+* DELETE requests — `DELETE /basics/greetings/:id`
+* Returning JSON objects with a consistent `{ module, ... }` shape
+* Injecting Services into Controllers via the constructor
 
-Each concept builds upon the previous one.
+Greetings are stored in an **in-memory array** inside the service. Data is lost when the server restarts and is shared across all requests — there is no database yet.
+
+DTO classes are used for POST and PUT request bodies, but validation is not active until the Validation chapter adds a global `ValidationPipe`.
 
 ---
 
@@ -206,8 +212,9 @@ basics/
 ├── basics.module.ts
 ├── basics.controller.ts
 ├── basics.service.ts
-├── dto/
-└── examples/
+└── dto/
+    ├── create-greeting.dto.ts
+    └── update-greeting.dto.ts
 ```
 
 ### basics.module.ts
@@ -236,15 +243,17 @@ Contains ready-to-run HTTP requests for every endpoint implemented in this modul
 
 ### dto/
 
-Contains Data Transfer Objects used for request validation.
+Contains Data Transfer Objects used to type request bodies for POST and PUT.
 
-Some DTOs will be introduced later in this chapter.
+The `@IsString()` and `@IsNumber()` decorators are in place for a later chapter — they do not validate requests until a global `ValidationPipe` is enabled.
 
 ---
 
 # Walkthrough
 
-The simplest request follows this sequence:
+Every endpoint follows the same pattern: the Controller receives the request, delegates to the Service, and returns the result.
+
+### Simple GET — `GET /basics/hello`
 
 ```text
 GET /basics/hello
@@ -255,24 +264,39 @@ Controller receives request
 
 ↓
 
-Controller calls BasicsService
+Controller calls BasicsService.hello()
 
 ↓
 
-Service returns data
-
-↓
-
-Controller returns response
+Service returns { module, message }
 
 ↓
 
 Client receives JSON
 ```
 
-Notice that the Controller doesn't generate the response itself.
+### Route parameter — `GET /basics/hello/Monte`
 
-It asks the Service to do the work.
+The `:name` segment is extracted with `@Param('name')` and passed to the service.
+
+### Query parameters — `GET /basics/greet?name=monte&language=en`
+
+Both `name` and `language` are read from the query string with `@Query()` and passed to the service.
+
+### Greetings CRUD — `/basics/greetings`
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| GET | `/basics/greetings` | List all greetings |
+| POST | `/basics/greetings` | Create a greeting (body: `{ id, name, message }`) |
+| PUT | `/basics/greetings/:id` | Update a greeting by id |
+| DELETE | `/basics/greetings/:id` | Delete a greeting by id |
+
+Updating or deleting a greeting that does not exist returns **404 Not Found** via `NotFoundException`.
+
+Use `requests.http` in this folder to try every endpoint.
+
+Notice that the Controller doesn't generate responses itself — it asks the Service to do the work.
 
 This separation makes the application easier to test, maintain, and extend.
 

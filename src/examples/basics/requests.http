@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:3000
+
+### Welcome — GET /basics
+GET {{baseUrl}}/basics
+
+### Hello — GET /basics/hello
+GET {{baseUrl}}/basics/hello
+
+### Hello with name — GET /basics/hello/:name
+GET {{baseUrl}}/basics/hello/Monte
+
+### Greet with query params — GET /basics/greet?name=monte&language=en
+GET {{baseUrl}}/basics/greet?name=monte&language=en
+
+### List greetings — GET /basics/greetings
+GET {{baseUrl}}/basics/greetings
+
+### Create greeting — POST /basics/greetings
+POST {{baseUrl}}/basics/greetings
+Content-Type: application/json
+
+{
+  "id": 9,
+  "name": "Bob",
+  "message": "Hello, Bob!"
+}
+
+### Update greeting — PUT /basics/greetings/:id
+PUT {{baseUrl}}/basics/greetings/1
+Content-Type: application/json
+
+{
+  "message": "Hello again, Monte!"
+}
+
+### Delete greeting — DELETE /basics/greetings/:id
+DELETE {{baseUrl}}/basics/greetings/9

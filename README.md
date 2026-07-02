@@ -139,12 +139,11 @@ The goal is to teach developers how to build reliable NestJS applications.
 ```text
 nestjs-by-example/
 
-├── docs/                  # Architecture and concept documentation
-├── docker/                # Docker configuration
-├── examples/              # Learning notes and guides
-├── scripts/               # Utility scripts
+├── docs/                  # Architecture and concept documentation (planned)
+├── docker/                # Docker configuration (planned)
+├── scripts/               # Utility scripts (planned)
 ├── src/
-│   └── examples/                 # Core learning modules (Nest CLI generated)
+│   └── examples/          # Core learning modules — each folder is a chapter
 │       │
 │       ├── basics/
 │       ├── modules/
@@ -170,14 +169,19 @@ nestjs-by-example/
 │       └── openapi/
 │
 ├── test/
-└── README.md
+├── README.md
+└── ROADMAP.md             # Recommended learning order and how to use each chapter
 ```
 
 Every feature is organized into its own module so it can be explored independently while still being part of a complete NestJS application.
 
+Each chapter lives under `src/examples/<chapter>/` and includes a `README.md` with theory, walkthrough, and exercises. See **[ROADMAP.md](./ROADMAP.md)** for the recommended learning order and step-by-step workflow.
+
 ---
 
 # Learning Roadmap
+
+> For the full learning guide — prerequisites, chapter order, and how to work through each module — see **[ROADMAP.md](./ROADMAP.md)**.
 
 The repository will gradually evolve through several phases.
 

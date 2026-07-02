@@ -2,6 +2,8 @@
 
 Welcome to **NestJS by Example**.
 
+> See also: **[README.md](./README.md)** for project goals, philosophy, and repository structure.
+
 This repository is designed to help developers move beyond tutorials by learning NestJS through practical, production-oriented examples.
 
 Unlike traditional courses that focus on building a single application, this project teaches individual concepts in isolation so you can understand *how* each feature works, *why* it exists, and *when* to use it.
@@ -95,7 +97,7 @@ The examples are organized to gradually build on one another.
 
 ## Foundation
 
-* Basics
+* [Basics](./src/examples/basics/README.md)
 * Modules
 * Dependency Injection
 * Configuration
@@ -157,7 +159,7 @@ Learning happens by experimenting—not just reading.
 
 As this repository grows, new examples, improvements, and corrections are always welcome.
 
-Please read the project's `CONTRIBUTING.md` before opening an issue or submitting a pull request.
+Please read the project's **[CONTRIBUTING.md](./CONTRIBUTING.md)** before opening an issue or submitting a pull request.
 
 ---
 

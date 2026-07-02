@@ -1,7 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateGreetingDto } from './dto/create-greeting.dto';
-import { UpdateGreetingDto } from './dto/udpate-greeting.dto';
+import { UpdateGreetingDto } from './dto/update-greeting.dto';
 
+// In-memory seed data — resets on server restart and is shared across all requests
 const greetings = [
   {
     id: 1,
@@ -47,6 +48,7 @@ const greetings = [
 
 @Injectable()
 export class BasicsService {
+  // Module entry point — confirms the basics routes are reachable
   welcome() {
     return {
       module: 'Basics',
@@ -54,6 +56,7 @@ export class BasicsService {
     };
   }
 
+  // Simple GET response with no parameters
   hello() {
     return {
       module: 'Basics',
@@ -61,6 +64,7 @@ export class BasicsService {
     };
   }
 
+  // Route parameter example — name comes from the URL path
   helloName(name: string) {
     return {
       module: 'Basics',
@@ -68,6 +72,7 @@ export class BasicsService {
     };
   }
 
+  // Query parameter example — name and language come from the query string
   greetLang(name: string, language: string) {
     return {
       module: 'Basics',
@@ -76,6 +81,7 @@ export class BasicsService {
     };
   }
 
+  // Returns all greetings from the in-memory store
   greetings() {
     return {
       module: 'Basics',
@@ -83,10 +89,13 @@ export class BasicsService {
     };
   }
 
+  // Appends a new greeting to the in-memory store
   createGreeting(createGreeting: CreateGreetingDto) {
     greetings.push(createGreeting);
-    console.log(greetings);
-    return createGreeting;
+    return {
+      module: 'Basics',
+      greeting: createGreeting,
+    };
   }
 
   updateGreeting(id: string, updateGreeting: UpdateGreetingDto) {
@@ -95,10 +104,7 @@ export class BasicsService {
     const greetingIndex = greetings.findIndex((g) => g.id === greetingId);
 
     if (greetingIndex === -1) {
-      return {
-        module: 'Basics',
-        message: 'Greeting not found.',
-      };
+      throw new NotFoundException('Greeting not found.');
     }
 
     greetings[greetingIndex] = {
@@ -106,7 +112,10 @@ export class BasicsService {
       ...updateGreeting,
     };
 
-    return greetings[greetingIndex];
+    return {
+      module: 'Basics',
+      greeting: greetings[greetingIndex],
+    };
   }
 
   deleteGreeting(id: string) {
@@ -114,15 +123,10 @@ export class BasicsService {
     const greetingIndex = greetings.findIndex((g) => g.id === greetingId);
 
     if (greetingIndex === -1) {
-      return {
-        module: 'Basics',
-        message: 'Greeting not found.',
-      };
+      throw new NotFoundException('Greeting not found.');
     }
 
     greetings.splice(greetingIndex, 1);
-
-    console.log(greetings);
 
     return {
       module: 'Basics',

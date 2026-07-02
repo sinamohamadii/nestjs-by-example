@@ -1,10 +1,27 @@
 {
   "name": "nestjs-by-example",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "description": "Learn NestJS through practical, production-inspired examples.",
+  "author": "Monte Sina",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sinamohamadii/nestjs-by-example.git"
+  },
+  "homepage": "https://github.com/sinamohamadii/nestjs-by-example#readme",
+  "bugs": {
+    "url": "https://github.com/sinamohamadii/nestjs-by-example/issues"
+  },
+  "keywords": [
+    "nestjs",
+    "typescript",
+    "nodejs",
+    "learning",
+    "examples",
+    "backend",
+    "rest-api"
+  ],
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
