@@ -1,6 +1,38 @@
 # ATTENTION
 This Project Is Currently Under Development!
 
+## 📊 Project Progress
+
+**Overall Progress:** 2 / 21 chapters completed (9.5%)
+
+```
+████░░░░░░░░░░░░░░░░ 9.5%
+```
+
+| Chapter | Status |
+|---------|--------|
+| ✅ Basics | Complete |
+| ✅ Modules | Complete |
+| 🟡 Dependency Injection | In Progress |
+| ⬜ Configuration | Planned |
+| ⬜ Validation | Planned |
+| ⬜ Pipes | Planned |
+| ⬜ Guards | Planned |
+| ⬜ Interceptors | Planned |
+| ⬜ Filters | Planned |
+| ⬜ Middleware | Planned |
+| ⬜ Authentication | Planned |
+| ⬜ Database | Planned |
+| ⬜ Upload | Planned |
+| ⬜ Cache | Planned |
+| ⬜ Events | Planned |
+| ⬜ Cron | Planned |
+| ⬜ Queues | Planned |
+| ⬜ WebSockets | Planned |
+| ⬜ GraphQL | Planned |
+| ⬜ Testing | Planned |
+| ⬜ OpenAPI | Planned |
+
 # NestJS by Example 🚀
 
 > **Learn NestJS through practical, production-inspired examples.**
