@@ -1,0 +1,69 @@
+@baseUrl = http://localhost:3000
+
+### List customers — GET /customers
+GET {{baseUrl}}/customers
+
+### Get customer by id — GET /customers/:id
+GET {{baseUrl}}/customers/1
+
+### Customer not found — GET /customers/:id
+GET {{baseUrl}}/customers/999
+
+### List products — GET /products
+GET {{baseUrl}}/products
+
+### Get product by id — GET /products/:id
+GET {{baseUrl}}/products/1
+
+### Product not found — GET /products/:id
+GET {{baseUrl}}/products/999
+
+### List orders — GET /orders
+GET {{baseUrl}}/orders
+
+### Get order by id — GET /orders/:id
+GET {{baseUrl}}/orders/1
+
+### Create order (uses ProductsService from ProductsModule) — POST /orders
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "customerId": 2,
+  "productId": 2,
+  "quantity": 1
+}
+
+### Create order with invalid product — POST /orders
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "productId": 999,
+  "quantity": 1
+}
+
+### List payments — GET /payments
+GET {{baseUrl}}/payments
+
+### Get payment by id — GET /payments/:id
+GET {{baseUrl}}/payments/1
+
+### Create payment (uses OrdersService from OrdersModule) — POST /payments
+POST {{baseUrl}}/payments
+Content-Type: application/json
+
+{
+  "orderId": 1,
+  "amount": 29.99
+}
+
+### Create payment for invalid order — POST /payments
+POST {{baseUrl}}/payments
+Content-Type: application/json
+
+{
+  "orderId": 999,
+  "amount": 10.00
+}
