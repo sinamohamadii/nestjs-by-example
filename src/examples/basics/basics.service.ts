@@ -89,6 +89,21 @@ export class BasicsService {
     };
   }
 
+  singleGreeting(id: string) {
+    const greetingId = Number(id); // Convert the id to a number since params are always strings
+
+    const greeting = greetings.find((g) => g.id === greetingId);
+
+    if (!greeting) {
+      throw new NotFoundException('Greeting not found.');
+    }
+
+    return {
+      module: 'Basics',
+      greeting: greeting,
+    };
+  }
+
   // Appends a new greeting to the in-memory store
   createGreeting(createGreeting: CreateGreetingDto) {
     greetings.push(createGreeting);

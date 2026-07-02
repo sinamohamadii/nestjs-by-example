@@ -49,6 +49,11 @@ export class BasicsController {
     return this.basicsService.greetings();
   }
 
+  @Get('greetings/:id')
+  singleGreeting(@Param('id') id: string) {
+    return this.basicsService.singleGreeting(id);
+  }
+
   // Create a new greeting: POST /basics/greetings
   @Post('greetings')
   createGreeting(@Body() createGreeting: CreateGreetingDto) {
