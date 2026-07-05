@@ -3,18 +3,15 @@ This Project Is Currently Under Development!
 
 ## 📊 Project Progress
 
-**Overall Progress:** 2 / 21 chapters completed (9.5%)
+**Overall Progress:** 3 / 21 chapters completed (9.5%)
 
-```
-████░░░░░░░░░░░░░░░░ 9.5%
-```
 
 | Chapter | Status |
 |---------|--------|
 | ✅ Basics | Complete |
 | ✅ Modules | Complete |
-| 🟡 Dependency Injection | In Progress |
-| ⬜ Configuration | Planned |
+| ✅ Dependency Injection | In Progress |
+| 🟡 Configuration | Planned |
 | ⬜ Validation | Planned |
 | ⬜ Pipes | Planned |
 | ⬜ Guards | Planned |
