@@ -1,0 +1,32 @@
+### Dependency Injection Example - HTTP Requests
+
+# Base URL
+@baseUrl = http://localhost:3000/notifications
+
+### Send Email Notification
+POST {{baseUrl}}/email
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "message": "Hello from NestJS DI!"
+}
+
+### Send SMS Notification
+POST {{baseUrl}}/sms
+Content-Type: application/json
+
+{
+  "phone": "+1234567890",
+  "message": "Hello from NestJS DI!"
+}
+
+### Send Both Email and SMS
+POST {{baseUrl}}/both
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "phone": "+1234567890",
+  "message": "Hello from NestJS DI!"
+}

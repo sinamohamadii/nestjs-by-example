@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { NotificationsModule } from './notifications/notifications.module';
 
-@Module({})
+@Module({
+  imports: [NotificationsModule]
+})
 export class DependencyInjectionModule {}
