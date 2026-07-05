@@ -1,0 +1,13 @@
+### Get current configuration
+GET http://localhost:3000/notifications/config
+Accept: application/json
+
+
+### Send a notification (uses configured sender)
+POST http://localhost:3000/notifications
+Content-Type: application/json
+
+{
+	"to": "john@test.com",
+	"message": "Welcome!"
+}

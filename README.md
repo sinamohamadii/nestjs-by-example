@@ -11,8 +11,8 @@ This Project Is Currently Under Development!
 | ✅ Basics | Complete |
 | ✅ Modules | Complete |
 | ✅ Dependency Injection | In Progress |
-| 🟡 Configuration | Planned |
-| ⬜ Validation | Planned |
+| ✅ Configuration | Planned |
+| 🟡 Validation | Planned |
 | ⬜ Pipes | Planned |
 | ⬜ Guards | Planned |
 | ⬜ Interceptors | Planned |

@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { BasicsModule } from './basics/basics.module';
 import { ModulesModule } from './modules/modules.module';
-import { ConfigModule } from './config/config.module';
 import { ValidationModule } from './validation/validation.module';
 import { PipesModule } from './pipes/pipes.module';
 import { GuardsModule } from './guards/guards.module';
@@ -21,13 +20,14 @@ import { GraphqlModule } from './graphql/graphql.module';
 import { TestingModule } from './testing/testing.module';
 import { OpenapiModule } from './openapi/openapi.module';
 import { DependencyInjectionModule } from './dependency-injection/dependency-injection.module';
+import { ConfigurationModule } from './configuration/configuration.module';
 
 @Module({
   imports: [
     BasicsModule,
     ModulesModule,
     DependencyInjectionModule,
-    ConfigModule,
+    ConfigurationModule,
     ValidationModule,
     PipesModule,
     GuardsModule,
