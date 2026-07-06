@@ -10,10 +10,10 @@ This Project Is Currently Under Development!
 |---------|--------|
 | ✅ Basics | Complete |
 | ✅ Modules | Complete |
-| ✅ Dependency Injection | In Progress |
-| ✅ Configuration | Planned |
-| 🟡 Validation | Planned |
-| ⬜ Pipes | Planned |
+| ✅ Dependency Injection | Complete |
+| ✅ Configuration | Complete |
+| ✅ Validation | Complete |
+| 🟡 Pipes | In Progress |
 | ⬜ Guards | Planned |
 | ⬜ Interceptors | Planned |
 | ⬜ Filters | Planned |
