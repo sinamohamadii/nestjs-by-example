@@ -1,0 +1,11 @@
+### Test not found error
+GET http://localhost:3000/filters/not-found
+
+### Test bad request error
+GET http://localhost:3000/filters/bad-request
+
+### Test server error
+GET http://localhost:3000/filters/server-error
+
+### Test unknown, unexpected error
+GET http://localhost:3000/filters/unknown-error
