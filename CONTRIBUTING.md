@@ -229,6 +229,28 @@ Even if you don't plan to implement it yourself, we'd love to discuss it.
 
 ---
 
+# Development Workflow
+
+1. Fork the repository.
+2. Clone your fork.
+3. Check out the `dev` branch.
+4. Create a feature branch.
+
+```bash
+git checkout dev
+git pull origin dev
+git checkout -b feature/your-feature
+```
+
+5. Make your changes.
+6. Commit using descriptive commit messages.
+7. Push your branch.
+8. Open a Pull Request targeting the `dev` branch.
+
+Please do **not** open Pull Requests directly against `main`.
+
+---
+
 # Code of Conduct
 
 Please be respectful and constructive.

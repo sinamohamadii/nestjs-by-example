@@ -310,6 +310,16 @@ feel free to open an issue or submit a pull request.
 
 The objective is to build one of the most useful NestJS educational repositories available.
 
+# 🌿 Branch Strategy
+
+This project follows a simple branching model:
+
+- `main` → Stable, production-ready examples
+- `dev` → Active development
+- `feature/*` → Individual features or chapters
+
+Please target the **`dev`** branch when opening Pull Requests.
+
 ---
 
 # Maintainer
