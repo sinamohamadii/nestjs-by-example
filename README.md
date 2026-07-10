@@ -3,7 +3,7 @@ This Project Is Currently Under Development!
 
 ## 📊 Project Progress
 
-**Overall Progress:** 5 / 21 chapters completed
+**Overall Progress:** 6 / 21 chapters completed
 
 
 | Chapter | Status |
@@ -16,7 +16,7 @@ This Project Is Currently Under Development!
 | 🟡 Pipes | In Progress |
 | ⬜ Guards | Planned |
 | ⬜ Interceptors | Planned |
-| ⬜ Filters | Planned |
+| ✅ Filters | Complete |
 | ⬜ Middleware | Planned |
 | ⬜ Authentication | Planned |
 | ⬜ Database | Planned |
