@@ -3,7 +3,7 @@ This Project Is Currently Under Development!
 
 ## 📊 Project Progress
 
-**Overall Progress:** 6 / 21 chapters completed
+**Overall Progress:** 10 / 21 chapters completed
 
 
 | Chapter | Status |
@@ -13,11 +13,11 @@ This Project Is Currently Under Development!
 | ✅ Dependency Injection | Complete |
 | ✅ Configuration | Complete |
 | ✅ Validation | Complete |
-| 🟡 Pipes | In Progress |
-| ⬜ Guards | Planned |
-| ⬜ Interceptors | Planned |
+| ✅ Pipes | Complete |
+| ✅ Guards | Complete |
+| ✅ Interceptors | Complete |
 | ✅ Filters | Complete |
-| ⬜ Middleware | Planned |
+| ✅ Middleware | Complete |
 | ⬜ Authentication | Planned |
 | ⬜ Database | Planned |
 | ⬜ Upload | Planned |
