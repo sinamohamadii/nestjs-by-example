@@ -1,0 +1,5 @@
+### First call — slow, comes from the "database" (source: "database")
+GET http://localhost:3000/cache/products/1
+
+### Second call within 10 seconds — fast, served from cache (source: "cache")
+GET http://localhost:3000/cache/products/1
