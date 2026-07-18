@@ -1,0 +1,26 @@
+### Open the interactive GraphQL playground in your browser:
+###   http://localhost:3000/graphql
+
+### Query: list all recipes
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "{ recipes { id title description } }"
+}
+
+### Query: get one recipe by id
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "{ recipe(id: 1) { title description } }"
+}
+
+### Mutation: add a new recipe
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation { addRecipe(input: { title: \"Omelette\", description: \"Quick egg dish\" }) { id title } }"
+}
