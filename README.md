@@ -1,6 +1,3 @@
-# ATTENTION
-This Project Is Currently Under Development!
-
 ## 📊 Project Progress
 
 **Overall Progress:** 21 / 21 chapters completed
