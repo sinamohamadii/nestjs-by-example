@@ -1,0 +1,9 @@
+### Add two numbers (the route exercised by the e2e test)
+GET http://localhost:3000/testing/add?a=2&b=3
+
+### Non-number input returns 400
+GET http://localhost:3000/testing/add?a=foo&b=3
+
+### Run the tests from the project root:
+###   pnpm test               # runs all *.spec.ts (unit + e2e style)
+###   pnpm test math.service  # run just the unit test
