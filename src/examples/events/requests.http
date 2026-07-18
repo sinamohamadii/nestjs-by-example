@@ -1,0 +1,7 @@
+### Register a user — watch the server console for the welcome-email log
+POST http://localhost:3000/events/register
+Content-Type: application/json
+
+{
+  "email": "jane@example.com"
+}
