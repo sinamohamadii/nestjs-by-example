@@ -1,0 +1,3 @@
+### Check how many heartbeats have run so far
+### Call it, wait a few seconds, and call it again — the number grows on its own.
+GET http://localhost:3000/cron/status
