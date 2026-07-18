@@ -3,7 +3,7 @@ This Project Is Currently Under Development!
 
 ## 📊 Project Progress
 
-**Overall Progress:** 10 / 21 chapters completed
+**Overall Progress:** 21 / 21 chapters completed
 
 
 | Chapter | Status |
@@ -18,17 +18,17 @@ This Project Is Currently Under Development!
 | ✅ Interceptors | Complete |
 | ✅ Filters | Complete |
 | ✅ Middleware | Complete |
-| ⬜ Authentication | Planned |
-| ⬜ Database | Planned |
-| ⬜ Upload | Planned |
-| ⬜ Cache | Planned |
-| ⬜ Events | Planned |
-| ⬜ Cron | Planned |
-| ⬜ Queues | Planned |
-| ⬜ WebSockets | Planned |
-| ⬜ GraphQL | Planned |
-| ⬜ Testing | Planned |
-| ⬜ OpenAPI | Planned |
+| ✅ Authentication | Complete |
+| ✅ Database | Complete |
+| ✅ Upload | Complete |
+| ✅ Cache | Complete |
+| ✅ Events | Complete |
+| ✅ Cron | Complete |
+| ✅ Queues | Complete |
+| ✅ WebSockets | Complete |
+| ✅ GraphQL | Complete |
+| ✅ Testing | Complete |
+| ✅ OpenAPI | Complete |
 
 # NestJS by Example 🚀
 
