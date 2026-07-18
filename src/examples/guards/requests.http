@@ -1,0 +1,22 @@
+### Step 1 — Public route: no guard, always allowed
+GET http://localhost:3000/guards/public
+
+### Step 2 — Private route without an API key: returns 401
+GET http://localhost:3000/guards/private
+
+### Step 2 — Private route with a valid API key: allowed
+GET http://localhost:3000/guards/private
+x-api-key: secret-123
+
+### Step 3 — Admin route without an API key: blocked by ApiKeyGuard (401)
+GET http://localhost:3000/guards/admin
+
+### Step 3 — Admin route with API key but wrong role: blocked by RolesGuard (403)
+GET http://localhost:3000/guards/admin
+x-api-key: secret-123
+x-user-role: customer
+
+### Step 3 — Admin route with API key and admin role: allowed
+GET http://localhost:3000/guards/admin
+x-api-key: secret-123
+x-user-role: admin
