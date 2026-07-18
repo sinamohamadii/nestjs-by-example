@@ -1,0 +1,4 @@
+### Hello route — middleware runs first
+### Check the server console for the log line,
+### and look at the "x-request-id" response header.
+GET http://localhost:3000/middleware/hello
