@@ -1,0 +1,21 @@
+### Step 1 — Upload any file (multipart/form-data, field name "file")
+POST http://localhost:3000/upload
+Content-Type: multipart/form-data; boundary=----boundary
+
+------boundary
+Content-Disposition: form-data; name="file"; filename="hello.txt"
+Content-Type: text/plain
+
+Hello from a text file!
+------boundary--
+
+### Step 2 — Upload an image (this text file will be rejected as non-image, 400)
+POST http://localhost:3000/upload/image
+Content-Type: multipart/form-data; boundary=----boundary
+
+------boundary
+Content-Disposition: form-data; name="file"; filename="hello.txt"
+Content-Type: text/plain
+
+Not an image, so this fails validation.
+------boundary--
