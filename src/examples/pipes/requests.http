@@ -1,0 +1,26 @@
+### Step 1 — No Pipe: the id arrives as a string
+GET http://localhost:3000/pipes/products/raw/1
+
+### Step 2 — Built-in ParseIntPipe: the id becomes a number
+GET http://localhost:3000/pipes/products/built-in/1
+
+### Step 2 — Built-in ParseIntPipe with invalid input: returns 400
+GET http://localhost:3000/pipes/products/built-in/abc
+
+### Step 4 — Custom ParsePositiveIntPipe: valid positive id
+GET http://localhost:3000/pipes/products/1
+
+### Step 4 — Custom ParsePositiveIntPipe: negative id returns 400
+GET http://localhost:3000/pipes/products/-5
+
+### Step 4 — Custom ParsePositiveIntPipe: zero returns 400
+GET http://localhost:3000/pipes/products/0
+
+### Step 4 — Custom ParsePositiveIntPipe: non-number returns 400
+GET http://localhost:3000/pipes/products/abc
+
+### Step 3 — Custom TrimStringPipe: spaces around the keyword are removed
+GET http://localhost:3000/pipes/products/search/   keyboard
+
+### Step 3 — Custom TrimStringPipe: another search
+GET http://localhost:3000/pipes/products/search/monitor
