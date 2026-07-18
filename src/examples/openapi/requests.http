@@ -1,0 +1,17 @@
+### Open the interactive Swagger UI in your browser:
+###   http://localhost:3000/docs
+
+### Get the raw OpenAPI JSON document
+GET http://localhost:3000/docs-json
+
+### Create a product (then see it listed and documented in Swagger UI)
+POST http://localhost:3000/openapi/products
+Content-Type: application/json
+
+{
+  "name": "Mechanical Keyboard",
+  "price": 120
+}
+
+### List products
+GET http://localhost:3000/openapi/products

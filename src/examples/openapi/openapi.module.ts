@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { OpenapiController } from './openapi.controller';
 
-@Module({})
+@Module({
+  controllers: [OpenapiController],
+})
 export class OpenapiModule {}
