@@ -1,0 +1,8 @@
+### Step 1 — Plain route: response returned as-is
+GET http://localhost:3000/interceptors/plain
+
+### Step 2 — Logged route: check the server console for timing logs
+GET http://localhost:3000/interceptors/logged
+
+### Step 3 — Wrapped route: response is wrapped in { success, data }
+GET http://localhost:3000/interceptors/wrapped
