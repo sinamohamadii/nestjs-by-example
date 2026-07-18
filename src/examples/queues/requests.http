@@ -1,0 +1,11 @@
+### This chapter needs Redis running:
+###   docker run -d -p 6379:6379 redis
+
+### Queue a background email job — the response returns immediately.
+### Watch the server console: the worker finishes the job ~2 seconds later.
+POST http://localhost:3000/queues/email
+Content-Type: application/json
+
+{
+  "email": "jane@example.com"
+}
