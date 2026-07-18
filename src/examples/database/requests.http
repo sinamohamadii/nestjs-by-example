@@ -1,0 +1,30 @@
+### Create a task
+POST http://localhost:3000/database/tasks
+Content-Type: application/json
+
+{
+  "title": "Buy milk"
+}
+
+### Create another task
+POST http://localhost:3000/database/tasks
+Content-Type: application/json
+
+{
+  "title": "Walk the dog"
+}
+
+### List all tasks
+GET http://localhost:3000/database/tasks
+
+### Get one task by id
+GET http://localhost:3000/database/tasks/1
+
+### Mark a task as done
+PATCH http://localhost:3000/database/tasks/1/done
+
+### Delete a task
+DELETE http://localhost:3000/database/tasks/2
+
+### Get a task that does not exist (404)
+GET http://localhost:3000/database/tasks/999
