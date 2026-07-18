@@ -1,0 +1,24 @@
+### Step 1 — Log in to get a token
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password123"
+}
+
+### Step 1 — Wrong password returns 401
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "wrong"
+}
+
+### Step 2 — Protected route without a token returns 401
+GET http://localhost:3000/auth/profile
+
+### Step 2 — Protected route with a token (paste the access_token from step 1)
+GET http://localhost:3000/auth/profile
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
