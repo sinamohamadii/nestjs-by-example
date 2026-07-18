@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>NestJS WebSocket demo</title>
+  </head>
+  <body>
+    <h1>Chat</h1>
+    <input id="text" placeholder="Type a message" />
+    <button onclick="send()">Send</button>
+    <ul id="messages"></ul>
+
+    <!-- Load the socket.io browser client from a CDN -->
+    <script src="https://cdn.socket.io/4.8.3/socket.io.min.js"></script>
+    <script>
+      // Connect to the NestJS gateway.
+      const socket = io('http://localhost:3000');
+
+      // Show every message the server broadcasts.
+      socket.on('message', (text) => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        document.getElementById('messages').appendChild(li);
+      });
+
+      // Emit a "message" event to the server.
+      function send() {
+        const input = document.getElementById('text');
+        socket.emit('message', input.value);
+        input.value = '';
+      }
+    </script>
+  </body>
+</html>

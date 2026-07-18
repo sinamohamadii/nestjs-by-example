@@ -1,0 +1,10 @@
+### WebSockets can't be tested with plain HTTP requests.
+### To try this chapter:
+###
+### 1. Start the app:  pnpm start:dev
+### 2. Open src/examples/websocket/client.html in your browser
+###    (open it in two tabs to see messages broadcast between them).
+### 3. Type a message and press Send — it appears in every connected tab.
+###
+### Under the hood the browser connects to the socket.io endpoint at:
+###   ws://localhost:3000/socket.io/
